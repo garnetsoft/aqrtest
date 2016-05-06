@@ -51,7 +51,7 @@ public class Utils
 						size = size * (-1); // for Sell or Short
 					}
 					
-					m = new FillMessage(MessageType.Fill, time, symbol, price, size, side);					
+					m = new FillMessage(MessageType.Fill, time, symbol, price, size, FillMessage.Side.valueOf(side));					
 				}
 
 				if (m != null) {
@@ -112,7 +112,7 @@ public class Utils
 						size = size * (-1); // for Sell or Short
 					}
 					
-					m = new FillMessage(MessageType.Fill, time, symbol, price, size, side);					
+					m = new FillMessage(MessageType.Fill, time, symbol, price, size, FillMessage.Side.valueOf(side));					
 				}
 
 				if (m != null) {

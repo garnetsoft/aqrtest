@@ -6,22 +6,17 @@ public final class FillMessage extends AbstractMessage implements Cloneable
 	
 	double price;
 	int size;
-	String side;
+	Side side;
 
 	FillMessage() { }
 	
-	FillMessage(MessageType type, long time, String symbol, double price, int size,
-			String side) {
+	public FillMessage(MessageType type, long time, String symbol, double price, int size,
+			Side side) {
 		super(type, time, symbol);
 		
 		this.price = price;
 		this.size = size;
 		this.side = side;
-	}
-
-	@Override
-	public MessageType getMessageType() {
-		return MessageType.Fill;
 	}
 	
 	public double getPrice() {
@@ -40,21 +35,8 @@ public final class FillMessage extends AbstractMessage implements Cloneable
 		this.size = s;
 	}
 	
-	public String getSide() {
+	public Side getSide() {
 		return side;
-	}
-	
-	public FillMessage clone() {
-		FillMessage fill = new FillMessage();
-		
-		fill.type = this.type;
-		fill.time = this.time;
-		fill.symbol = this.symbol;
-		fill.price = this.price;
-		fill.size = this.size;
-		fill.side = this.side;
-		
-		return fill;
 	}
 	
 	@Override

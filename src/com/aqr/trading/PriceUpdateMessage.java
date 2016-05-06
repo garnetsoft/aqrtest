@@ -10,10 +10,6 @@ public final class PriceUpdateMessage extends AbstractMessage
 		this.price = price;
 	}
 
-	public MessageType getMessageType() {
-		return MessageType.PriceUpdate;
-	}
-
 	public double getPrice() {
 		return this.price;
 	}

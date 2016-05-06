@@ -13,10 +13,6 @@ public final class PNLMessage extends AbstractMessage
 		this.pnl = pnl;
 	}
 
-	public MessageType getMessageType() {
-		return MessageType.PNL;
-	}
-	
 	public int getSize() {
 		return signedSize;
 	}

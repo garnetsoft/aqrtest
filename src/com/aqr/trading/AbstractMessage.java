@@ -14,7 +14,9 @@ public abstract class AbstractMessage implements Message
 		this.symbol = symbol;
 	}
 
-	public abstract MessageType getMessageType();
+	public MessageType getMessageType() {
+		return this.type;
+	}
 	
 	public long getTimestamp() {
 		return this.time;
