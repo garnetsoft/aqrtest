@@ -13,7 +13,6 @@ public class PositionContainer
 			
 	public PositionContainer() {
 		this.pnlSymbolMap = new HashMap<String, PNLMessage>();
-
 		this.buyPositions = new HashMap<String, FillMessage>();
 		this.sellPositions = new HashMap<String, FillMessage>();		
 	}
